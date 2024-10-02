@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+<style>
+    body{
+        background-color: #101720;
+        color: white;
+        margin: 0;
+
+    }
+
+    .cont1{
+       margin-left: 45vw;
+    }
+
+    .cont2{
+        margin-left: 33vw;
+        color: aquamarine;
+        margin-bottom: 15px;
+    }
+
+    .cont2 li{
+        padding-bottom: 10px;
+    }
+
+    .cont1 h1{
+        font-size: 54px ;
+    }
+
+    .cont1 h2{
+        margin-left: 1vw;
+        font-size: 28px;
+    }
+
+    .qual{
+        display: flex;
+        padding-left: 6vw;
+    }
+
+    .strenght{
+        width: 42vw;
+        
+        background: rgb(136, 215, 222);
+        color: #101720;
+        mix-blend-mode: screen;
+        border-radius: 12px;
+    }
+
+    .weakness {
+        width: 42vw;
+        
+        margin-left: 4vw;
+        background: rgb(145, 223, 230);
+        color: #101720;
+        mix-blend-mode: screen;
+        border-radius: 10px;
+       
+    }
+
+    .strenght h3{
+        margin-left: 17.5vw;
+        font-size: 22px;
+    }
+
+    .weakness h3{
+        margin-left: 17.5vw;
+        font-size: 22px;
+        
+    }
+
+   .qual li{
+    margin-bottom: 12px;
+    font-size: 18px;
+   }
+
+   .c3{
+    display: grid;
+    place-items: center;
+    padding-top: 5px;
+   }
+
+   .c3 h3{
+       font-size: 28px;
+       color: yellowgreen;
+   }
+
+   .c3 a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    background-color: blueviolet;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+   }
+
+   .c3 a:hover{
+    background-color: #9020ad;
+   }
+
+   .cont1, .cont2, .qual, .c3 {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="cont1">
+        <h1>Result</h1> 
+       <h2>Type: 3</h2>
+
+      
+    </div>
+
+    <div class="cont2">
+    <ul>
+        <li>Perfectionist: Always aims for excellence and accuracy.</li>
+        <li>Creative Thinker: Expresses ideas uniquely and deeply.</li>
+        <li>Quiet Specialist: Observant and independent in their pursuits.</li>
+        <li>Active Controller: Takes charge and stands up for what's right.</li>
+       </ul>
+    </div>
+ 
+    <div class="qual">
+        <div class="strenght">
+            <h3>Strengths</h3>
+            <ul>
+                <li>Detail-oriented: Ensures accuracy and quality in tasks.</li>
+                <li>Innovative: Offers original solutions and ideas.</li>
+                <li>Leadership: Inspires confidence and motivates action.</li>
+                <li>Emotionally deep: Connects deeply with others through creativity.</li>
+                <li>Intellectually curious: Driven by a thirst for knowledge and discovery.</li>
+            </ul>
+        </div>
+
+        <div class="weakness">
+            <h3>Weaknesses</h3>
+            <ul>
+                <li>Rigidity: Resistance to change and flexibility.</li>
+                <li>Overwork: Pursuit of perfection leads to stress and burnout.</li>
+                <li>Difficulty expressing emotions: Reticent, leading to misunderstandings.</li>
+                <li>Difficulty delegating: Struggles to trust others to meet high standards.</li>
+                <li>Self-doubt: Fixates on perceived flaws, hindering confidence.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c3">
+        <h3>Great! Now you are ready to go on a journey of Solo Leveling.</h3>
+        <a href="/taskstype3">Get Started</a>
+    </div>
+
+    <script>
+        const utterance = new SpeechSynthesisUtterance("Here's an overview of your personality. Proceed if you find it relatable");
+    speechSynthesis.speak(utterance);
+    </script>
+
+</body>
+</html>

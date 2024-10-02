@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+
+<style>
+    body{
+        background-color: #101720;
+        color: white;
+        margin: 0;
+    }
+
+    .cont1{
+       margin-left: 45vw;
+    }
+
+    .cont2{
+        margin-left: 33vw;
+        color: aquamarine;
+        margin-bottom: 15px;
+    }
+
+    .cont2 li{
+        padding-bottom: 10px;
+    }
+
+    .cont1 h1{
+        font-size: 54px ;
+    }
+
+    .cont1 h2{
+        margin-left: 1vw;
+        font-size: 28px;
+    }
+
+    .qual{
+        display: flex;
+        padding-left: 6vw;
+    }
+
+    .strenght{
+        width: 42vw;
+        
+        background: rgb(136, 215, 222);
+        color: #101720;
+        mix-blend-mode: screen;
+        border-radius: 12px;
+    }
+
+    .weakness {
+        width: 42vw;
+        
+        margin-left: 4vw;
+        background: rgb(145, 223, 230);
+        color: #101720;
+        mix-blend-mode: screen;
+        border-radius: 10px;
+       
+    }
+
+    .strenght h3{
+        margin-left: 17.5vw;
+        font-size: 22px;
+    }
+
+    .weakness h3{
+        margin-left: 17.5vw;
+        font-size: 22px;
+        
+    }
+
+   .qual li{
+    margin-bottom: 12px;
+    font-size: 18px;
+   }
+
+   .c3{
+    display: grid;
+    place-items: center;
+    padding-top: 10px;
+   }
+
+   .c3 h3{
+       font-size: 28px;
+       color: yellowgreen;
+   }
+
+   .c3 a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    background-color: blueviolet;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+   }
+
+   .c3 a:hover{
+    background-color: #9020ad;
+   }
+
+   .cont1, .cont2, .qual, .c3 {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="cont1">
+        <h1>Result</h1> 
+       <h2>Type: 1</h2>
+
+      
+    </div>
+
+    <div class="cont2">
+    <ul>
+        <li>Driven Achiever: Sets goals and works hard to achieve them.</li>
+        <li>Trusted Doubter: Questions things but stays loyal to their beliefs.</li>
+        <li>Flexible Peacemaker: Adjusts to different situations to keep the peace.</li>
+       </ul>
+    </div>
+ 
+    <div class="qual">
+        <div class="strenght">
+            <h3>Strengths</h3>
+            <ul>
+                <li>Goal-focused: Sets clear objectives and works hard to reach them.</li>
+                <li>Professional Image: Appears competent and capable in both work and social settings.</li>
+                <li>Competitive Edge: Strives for success and performs well under pressure.</li>
+                <li>Adaptability: Handles change and challenges effectively.</li>
+                <li>Supportive: Provides stability and security to those around them.</li>
+            </ul>
+        </div>
+
+        <div class="weakness">
+            <h3>Weaknesses</h3>
+            <ul>
+                <li>Overworking: Works too much and risks burnout.</li>
+                <li>Dishonesty: May exaggerate or manipulate to keep up appearances.</li>
+                <li>Fear of Failure: Struggles with self-doubt and anxiety about falling short.</li>
+                <li>Dependency: Relies too heavily on others for validation.</li>
+                <li>Resistance to Change: Fears uncertainty and struggles to adapt.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c3">
+        <h3>Great! Now you are ready to go on a journey of Solo Leveling.</h3>
+        <a href="/taskstype1">Get Started</a>
+    </div>
+
+    <script>
+        const utterance = new SpeechSynthesisUtterance("Here's an overview of your personality. Proceed if you find it relatable");
+    speechSynthesis.speak(utterance);
+    </script>
+
+</body>
+</html>

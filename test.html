@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101720;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: rgb(64, 142, 226);
+  }
+  .question {
+    margin-bottom: 15px;
+  }
+
+  button{
+  width: 125px;
+  height: 40px;
+  font-size: 16px;
+  background-color: rgb(36, 145, 213);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid  transparent;
+ 
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.container{
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Personality Test</h1>
+  <form id="testForm">
+    <div class="section">
+      <h2>Section 1</h2>
+      <div class="question">
+        <p>I am highly driven to succeed and excel in various aspects of my life, often comparing my performance with others.</p>
+        <label><input type="radio" name="q1" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q1" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q1" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q1" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q1" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+       <div class="question">
+        <p>I tend to question things and adopt a skeptical attitude until I am convinced of their validity.
+</p>
+        <label><input type="radio" name="q2" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q2" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q2" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q2" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q2" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+       <div class="question">
+        <p>I value loyalty and commitment in relationships and am known for standing by my friends and loved ones through thick and thin.</p>
+        <label><input type="radio" name="q3" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q3" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q3" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q3" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q3" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+       <div class="question">
+        <p>When faced with challenges, I am motivated to find creative solutions and adapt to new circumstances.</p>
+        <label><input type="radio" name="q4" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q4" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q4" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q4" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q4" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+       <div class="question">
+        <p>I prefer to maintain harmony in my relationships and often act as a mediator in conflicts.</p>
+        <label><input type="radio" name="q5" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q5" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q5" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q5" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q5" value="5"> 5 - Strongly Agree</label>
+      </div>
+      <!-- Repeat similar structure for questions 2-5 in Section 1 -->
+    </div>
+    <div class="section">
+      <h2>Section 2</h2>
+      <div class="question">
+        <p>Helping others is one of my top priorities, and I often go out of my way to assist those in need.</p>
+        <label><input type="radio" name="q6" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q6" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q6" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q6" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q6" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I have a strong imagination and enjoy expressing my creativity through various outlets like art, writing, or music.</p>
+        <label><input type="radio" name="q7" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q7" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q7" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q7" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q7" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I tend to keep to myself and excel in tasks that require deep concentration and focus.</p>
+        <label><input type="radio" name="q8" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q8" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q8" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q8" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q8" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I am highly sensitive to the needs of others and often put their well-being above my own.</p>
+        <label><input type="radio" name="q9" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q9" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q9" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q9" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q9" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I like to take charge of situations and ensure that things are done efficiently and effectively.</p>
+        <label><input type="radio" name="q10" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q10" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q10" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q10" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q10" value="5"> 5 - Strongly Agree</label>
+      </div>
+      <!-- Repeat similar structure for questions 6-10 in Section 2 -->
+    </div>
+    <div class="section">
+      <h2>Section 3</h2>
+      <div class="question">
+        <p>I have high standards for myself and others, often striving for perfection in everything I do.</p>
+        <label><input type="radio" name="q11" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q11" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q11" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q11" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q11" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I enjoy working independently and prefer to focus on tasks that allow me to use my specialized skills and knowledge.</p>
+        <label><input type="radio" name="q12" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q12" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q12" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q12" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q12" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I am highly driven and take charge of situations to ensure that things are done according to my standards.</p>
+        <label><input type="radio" name="q13" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q13" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q13" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q13" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q13" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I am known for my intense creativity and innovative thinking, often coming up with unique solutions to problems.</p>
+        <label><input type="radio" name="q14" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q14" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q14" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q14" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q14" value="5"> 5 - Strongly Agree</label>
+      </div>
+      
+      <div class="question">
+        <p>I am focused on achieving my goals and will do whatever it takes to succeed, even if it means pushing myself to the limit.</p>
+        <label><input type="radio" name="q15" value="1"> 1 - Strongly Disagree</label><br>
+        <label><input type="radio" name="q15" value="2"> 2 - Disagree</label><br>
+        <label><input type="radio" name="q15" value="3"> 3 - Neutral</label><br>
+        <label><input type="radio" name="q15" value="4"> 4 - Agree</label><br>
+        <label><input type="radio" name="q15" value="5"> 5 - Strongly Agree</label>
+      </div>
+      <!-- Repeat similar structure for questions 11-15 in Section 3 -->
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+ const utterance = new SpeechSynthesisUtterance("Welcome! Please take the following test honestly before you proceed. This will help us in knowing you better.");
+    speechSynthesis.speak(utterance);
+
+document.getElementById("testForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let formData = new FormData(event.target);
+    
+    // Check if all questions are answered
+    for (let i = 1; i <= 15; i++) {
+      if (!formData.has("q" + i)) {
+        alert("Please answer all questions.");
+        return;
+      }
+    }
+    
+    // Initialize total scores for each type
+    let type1Total = 0;
+    let type2Total = 0;
+    let type3Total = 0;
+
+    // Loop through form data to calculate scores
+    for (let entry of formData.entries()) {
+      let questionNumber = parseInt(entry[0].substring(1));
+      let score = parseInt(entry[1]);
+      if (questionNumber >= 1 && questionNumber <= 5) {
+        type1Total += score;
+      } else if (questionNumber >= 6 && questionNumber <= 10) {
+        type2Total += score;
+      } else if (questionNumber >= 11 && questionNumber <= 15) {
+        type3Total += score;
+      }
+    }
+
+    // Determine the personality type with the highest total score
+    let personalityType;
+    let highestTotal = Math.max(type1Total, type2Total, type3Total);
+    if (highestTotal === type1Total) {
+      personalityType = "Type 1";
+      window.location.href = '/resulttype1';
+    } else if (highestTotal === type2Total) {
+      personalityType = "Type 2";
+      window.location.href = '/resulttype2';
+    } else {
+      personalityType = "Type 3";
+      window.location.href = '/resulttype3';
+    }
+
+    // Display the result
+   alert("Your personality type is: " + personalityType);
+  });
+
+</script>
+</body>
+</html>
