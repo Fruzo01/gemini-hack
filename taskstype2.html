@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #101720;
+            margin: 0;
+            padding-top: 100px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color:  rgb(36, 145, 213);
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .task {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        button{
+            width: 125px;
+  height: 40px;
+  font-size: 16px;
+  background-color: rgb(36, 145, 213);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid  transparent;
+ 
+  margin-top: 10px;
+  cursor: pointer;
+        }
+
+         input[type="checkbox"] {
+            width: 25px; /* Increase size of the checkbox */
+            height: 25px; /* Increase size of the checkbox */
+            margin-right: 10px;
+        }
+
+        .container, .h1, .task, button, .input{
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tasks</h1>
+        <div id="task-container"></div>
+        <button id="next-task-btn" disabled>Next Task</button>
+    </div>
+    <script>
+
+const utterance = new SpeechSynthesisUtterance("Perform the following tasks and, try implementing them in your daily life, also proceed forward only if, you have completed the task or, when you are satisfied with it.");
+    speechSynthesis.speak(utterance);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const taskContainer = document.getElementById('task-container');
+            const tasks = [
+                { task: "Try helping a needy.", description: " This will make you feel good and make you more humble." },
+                { task: "Go for a walk either during sunrise or sunset.", description: "This will help in reducing stress, improve mood, and increase energy levels." },
+                { task: "Try prioritizing your work and needs over others.", description: "This will help you in overcoming your habit of neglecting your own needs over others." },
+                { task: "Write a daily journal of whatever you did whole day.", description: "This can help increase self-awareness and identify moments where others may have been tempted to exaggerate or manipulate the truth." },
+                { task: "Try making a bond with a person with whom you can talk about anything.", description: "To combat superficiality and prioritize deeper connections." },
+                { task: "Set Achievable Goals on regular basis and believe in yourself.", description: "To help overcome the fear of failure and reduce self-doubt." },
+                { task: "Try talking to a friend or two on regular basis even if its a phone call.", description: "This will help you in avoiding social withdrawal and isolation" },
+                { task: "Practice a hobby", description: "Dedicate some time to pursue a hobby you enjoy for relaxation and fulfillment." },
+                { task: "Do some exercise", description: "Engage in physical activity to stay healthy and boost your mood." },
+                { task: "Watch a documentary", description: "Watch a documentary film to learn about a specific subject or issue." }
+            ];
+
+            let currentTaskIndex = 0;
+            let checkboxes = [];
+
+            function displayTask() {
+                if (currentTaskIndex < tasks.length) {
+                    const taskElement = document.createElement('div');
+                    taskElement.classList.add('task');
+                    const taskText = document.createElement('span');
+                    taskText.textContent = `Task ${currentTaskIndex + 1}: ${tasks[currentTaskIndex].task}`;
+                    taskElement.appendChild(taskText);
+                    const taskDescription = document.createElement('p');
+                    taskDescription.textContent = tasks[currentTaskIndex].description;
+                    taskElement.appendChild(taskDescription);
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkboxes.push(checkbox);
+                    taskElement.appendChild(checkbox);
+                    taskContainer.appendChild(taskElement);
+                } else {
+                    taskContainer.textContent = "You have completed all tasks!";
+                    document.getElementById('next-task-btn').style.display = 'none';
+                }
+            }
+
+            displayTask();
+            checkboxes[currentTaskIndex].addEventListener('change', function() {
+                document.getElementById('next-task-btn').disabled = !this.checked;
+            });
+
+            document.getElementById('next-task-btn').addEventListener('click', function() {
+                if (checkboxes[currentTaskIndex].checked) {
+                    currentTaskIndex++;
+                    taskContainer.innerHTML = '';
+                    displayTask();
+                    checkboxes[currentTaskIndex].addEventListener('change', function() {
+                        document.getElementById('next-task-btn').disabled = !this.checked;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
